@@ -192,6 +192,15 @@ services:
 #    volumes:
 #      - files:/mnt/files
 
+#  ngrok:
+#    image: fnichol/ngrok
+#    depends_on:
+#      - nginx
+#    command: nginx:80
+#    labels:
+#      traefik.port: '4040'
+#      traefik.frontend.rule: 'Host:ngrok.{project}.local'
+
 #  portainer:
 #    image: portainer/portainer
 #    command: --no-auth -H unix:///var/run/docker.sock
